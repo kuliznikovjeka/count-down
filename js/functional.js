@@ -39,8 +39,18 @@ function determineTimeLeft(e) {
 	}
 }
 
+let timeInterval = null;
+
 function setСountdown() {
-	const timeInterval = setInterval(updateTimer, 1000);
+	if (timeInterval !== null) clearInterval(timeInterval);
+
+	const isFirstRun = timeInterval === null;
+
+	if (isFirstRun) {
+		timeInterval = setInterval(updateTimer);
+	} else {
+		timeInterval = setInterval(updateTimer, 1000);
+	}
 
 	function updateTimer() {
 		const time = determineTimeLeft();
@@ -56,6 +66,7 @@ function setСountdown() {
 		}
 	}
 }
+
 
 function hiddenZeroValue(value, uiElement) {
 	const zero = 0;
