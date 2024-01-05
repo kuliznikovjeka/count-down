@@ -89,14 +89,14 @@ body {
 	// .countdown__input-date
 
 	&__input-date {
+		@media (min-width: 481px) {
+			max-width: 380px;
+		}
 		border-radius: 8px;
 		border: 1px solid $greyColor;
 		background-color: $whiteColor;
 		padding: 14px;
 		width: 100%;
-		@media (min-width: 481px) {
-			max-width: 380px;
-		}
 	}
 
 	// .countdown__button
