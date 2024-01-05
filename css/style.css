@@ -200,7 +200,7 @@ body {
   border: 1px solid #e2e2e2;
   background-color: #ffffff;
   padding: 14px;
-  width: 100%;
+  width: 100% !important;
 }
 
 @media (min-width: 481px) {
